@@ -1,0 +1,87 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Sigmar One', cursive;
+
+}
+.Text-place{
+  position:relative;
+  display:block;
+  text-align:center;
+  margin:auto;
+  padding-top:10px;
+  font-family: 'Sigmar One';
+  font-size:60px;
+  
+}
+@media(max-width:480px){
+  .Text-place{
+  font-size:40px;
+  }
+}
+.fromImage{
+  display:none;
+   left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+  position:absolute;
+  bottom:0;
+  animation-name:img-entrance;
+  animation-duration:1s;
+  animation-fill-mode:forwards;
+}
+@keyframes img-entrance{
+  0%{
+    bottom:100vh;
+  }
+  100%{
+    bottom:50px;
+  }
+}
+.root-class{
+  background:#FFD3D9;
+  position:relative;
+  height:100%;
+  
+}
+.heart{
+  display:none;
+  
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+  top:100px;
+  
+  transform:rotate(-45deg);
+ animation-name:beat;
+  animation-iteration-count:infinite;
+  animation-duration:1s;
+}
+@keyframes beat {
+    0% {
+      transform: scale(1) rotate(-45deg);
+    }
+    50% {
+      transform: scale(0.6) rotate(-45deg);
+    }
+  }
+.heart,.heart::before,.heart::after{
+  position:absolute;
+  height:100px;
+  width:100px;
+  background-color:#ff333d;
+  
+}
+
+.heart::before,.heart::after{
+  border-radius:50%;
+  content:"";
+}
+.heart::before{
+  top:-50px;
+}
+.heart::after{
+  left:50px;
+}
